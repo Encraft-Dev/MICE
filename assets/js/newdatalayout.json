@@ -1,0 +1,68 @@
+{
+  "Cluster": {
+    "Active": true,
+    "Area": 83000,
+    "Battery": "Yes",
+    "DH_Ext": 2000,
+    "Name": "Health Centre",
+    "PV": "Yes",
+    "Postcode": "B37 5BP",
+    "Smart Controls": "No",
+    "Transport": "No"
+  },
+  "ID": "1 bed bungalow Bryant Wallframe",
+  "# of Properties": 14,
+  "Profile": {
+    "Occupancy type": "Domestic-ERC"
+  },
+  "Geometry": {
+    "GIA": 48,
+    "#Stories": 1,
+    "PV_%Roof": 0.4,
+    "PV_Pitch": 35,
+    "PV_Orientation": 0
+  },
+  "DH_Int": null,
+  "Scenario": [
+    {
+      "Benchmark": {
+        "Benchmark_Type": "Project",
+        "Benchmark_ID": "Tower block 1 bed",
+        "FEE": 108.8,
+        "Elec": "SAP2012",
+        "Fuel_Price": "",
+        "DHW%": "SAP2012",
+        "Loc_Uplift": "FALSE"
+      },
+      "Fuel": "Gas",
+      "E_Billing": "Own",
+      "S_E_Capacity": null,
+      "PV_X_Out": null,
+      "PV_X_Peak": null,
+      "Fabric": {
+        "Type": "EWI",
+        "Cost": 500
+      }
+    },
+    {
+      "Benchmark": {
+        "Benchmark_Type": "Project",
+        "Benchmark_ID": "Tower block 1 bed",
+        "FEE": 108.8,
+        "Elec": "SAP2012",
+        "Fuel_Price": "",
+        "DHW%": "SAP2012",
+        "Loc_Uplift": "FALSE"
+      },
+      "Fuel": "Gas",
+      "E_Billing": "Own",
+      "S_E_Capacity": null,
+      "PV_X_Out": null,
+      "PV_X_Peak": null,
+      "Fabric": {
+        "Type": "EWI",
+        "Cost": 500
+      }
+    }
+  ]
+}

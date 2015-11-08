@@ -1,0 +1,5 @@
+[{"Active":"TRUE","Name":"South","Postcode":"B37 5HY","Area":52000,"PV":"Yes","Transport":"No","Smart Controls":"No","Battery":"Yes","DH_Ext":null},
+{"Active":"TRUE","Name":"Central","Postcode":"B37 5EJ","Area":123000,"PV":"Yes","Transport":"No","Smart Controls":"No","Battery":"Yes","DH_Ext":null},
+{"Active":"TRUE","Name":"Health Centre","Postcode":"B37 5BP","Area":83000,"PV":"Yes","Transport":"No","Smart Controls":"No","Battery":"Yes","DH_Ext":2000},
+{"Active":"TRUE","Name":"North","Postcode":"cv32 4ys","Area":133000,"PV":"Yes","Transport":"No","Smart Controls":"No","Battery":"Yes","DH_Ext":null},
+{"Active":"TRUE","Name":"Profit","Postcode":"B37 5AE","Area":1111,"PV":"Yes","Transport":"No","Smart Controls":"No","Battery":"Yes","DH_Ext":null}]

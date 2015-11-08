@@ -1,0 +1,371 @@
+[
+  {
+    "Benchmark":"Project",
+    "Type":"Tower block 1 bed",
+    "FEE":108.8,
+    "Elec":"SAP2012",
+    "Fuel_Price":"",
+    "DHW%":"SAP2012",
+    "Loc_Uplift":"FALSE"
+  },
+  {
+    "Benchmark":"Project",
+    "Type":"Tower block 2 bed",
+    "FEE":79.4,
+    "Elec":"SAP2012",
+    "Fuel_Price":"",
+    "DHW%":"SAP2012",
+    "Loc_Uplift":"FALSE"
+  },
+  {
+    "Benchmark":"Project",
+    "Type":"FEE70",
+    "FEE":70,
+    "Elec":"SAP2012",
+    "Fuel_Price":"",
+    "DHW%":"SAP2012",
+    "Loc_Uplift":"FALSE"
+  },
+  {
+    "Benchmark":"Project",
+    "Type":"Bungalow Semi",
+    "FEE":170,
+    "Elec":"SAP2012",
+    "Fuel_Price":"",
+    "DHW%":"SAP2012",
+    "Loc_Uplift":"FALSE"
+  },
+  {
+    "Benchmark":"Project",
+    "Type":"Low rise flats",
+    "FEE":160,
+    "Elec":"SAP2012",
+    "Fuel_Price":"",
+    "DHW%":"SAP2012",
+    "Loc_Uplift":"FALSE"
+  },
+  {
+    "Benchmark":"Project",
+    "Type":"Low rise retrofit",
+    "FEE":46,
+    "Elec":"SAP2012",
+    "Fuel_Price":"",
+    "DHW%":"SAP2012",
+    "Loc_Uplift":"FALSE"
+  },
+  {
+    "Benchmark":"Project",
+    "Type":"Semi-detached",
+    "FEE":135,
+    "Elec":"SAP2012",
+    "Fuel_Price":"",
+    "DHW%":"SAP2012",
+    "Loc_Uplift":"FALSE"
+  },
+  {
+    "Benchmark":"Project",
+    "Type":"House cavity wall insulation",
+    "FEE":100,
+    "Elec":"SAP2012",
+    "Fuel_Price":"",
+    "DHW%":"SAP2012",
+    "Loc_Uplift":"FALSE"
+  },
+  {
+    "Benchmark":"Project",
+    "Type":"Health Centre",
+    "FEE":196,
+    "Elec":"70",
+    "Fuel_Price":"",
+    "DHW%":"0.1",
+    "Loc_Uplift":"FALSE"
+  },
+  {
+    "Benchmark":"Project",
+    "Type":"Tower block post insulation",
+    "FEE":48,
+    "Elec":"SAP2012",
+    "Fuel_Price":"",
+    "DHW%":"SAP2012",
+    "Loc_Uplift":"FALSE"
+  },
+  {
+    "Benchmark":"Project",
+    "Type":"Bungalow cavity wall",
+    "FEE":125,
+    "Elec":"SAP2012",
+    "Fuel_Price":"",
+    "DHW%":"SAP2012",
+    "Loc_Uplift":"FALSE"
+  },
+  {
+    "Benchmark":"BREEAM Estimate (80% TM46)",
+    "Type":"Swimming Pool Centre",
+    "FEE":904,
+    "Elec":"196",
+    "Fuel_Price":"small",
+    "DHW%":"0.1",
+    "Loc_Uplift":"TRUE"
+  },
+  {
+    "Benchmark":"BREEAM Estimate (80% TM46)",
+    "Type":"Dry Sports",
+    "FEE":264,
+    "Elec":"76",
+    "Fuel_Price":"medium",
+    "DHW%":"0.1",
+    "Loc_Uplift":"TRUE"
+  },
+  {
+    "Benchmark":"BREEAM Estimate (80% TM46)",
+    "Type":"General Retail",
+    "FEE":120,
+    "Elec":"132",
+    "Fuel_Price":"small",
+    "DHW%":"0.1",
+    "Loc_Uplift":"TRUE"
+  },
+  {
+    "Benchmark":"BREEAM Estimate (80% TM46)",
+    "Type":"Large Food Store",
+    "FEE":84,
+    "Elec":"320",
+    "Fuel_Price":"",
+    "DHW%":"0.1",
+    "Loc_Uplift":"TRUE"
+  },
+  {
+    "Benchmark":"BREEAM Estimate (80% TM46)",
+    "Type":"School",
+    "FEE":120,
+    "Elec":"32",
+    "Fuel_Price":"",
+    "DHW%":"0.1",
+    "Loc_Uplift":"TRUE"
+  },
+  {
+    "Benchmark":"BREEAM Estimate (80% TM46)",
+    "Type":"General Office",
+    "FEE":96,
+    "Elec":"76",
+    "Fuel_Price":"",
+    "DHW%":"0.1",
+    "Loc_Uplift":"TRUE"
+  },
+  {
+    "Benchmark":"BREEAM Estimate (80% TM46)",
+    "Type":"Large non-food shop",
+    "FEE":136,
+    "Elec":"56",
+    "Fuel_Price":"",
+    "DHW%":"0.1",
+    "Loc_Uplift":"TRUE"
+  },
+  {
+    "Benchmark":"BREEAM Estimate (80% TM46)",
+    "Type":"Restaurant",
+    "FEE":296,
+    "Elec":"72",
+    "Fuel_Price":"",
+    "DHW%":"0.1",
+    "Loc_Uplift":"TRUE"
+  },
+  {
+    "Benchmark":"BREEAM Estimate (80% TM46)",
+    "Type":"Bar/pub",
+    "FEE":280,
+    "Elec":"104",
+    "Fuel_Price":"",
+    "DHW%":"0.1",
+    "Loc_Uplift":"TRUE"
+  },
+  {
+    "Benchmark":"BREEAM Estimate (80% TM46)",
+    "Type":"Hotel",
+    "FEE":264,
+    "Elec":"84",
+    "Fuel_Price":"",
+    "DHW%":"0.1",
+    "Loc_Uplift":"TRUE"
+  },
+  {
+    "Benchmark":"BREEAM Estimate (80% TM46)",
+    "Type":"Hospital",
+    "FEE":336,
+    "Elec":"72",
+    "Fuel_Price":"",
+    "DHW%":"0.1",
+    "Loc_Uplift":"TRUE"
+  },
+  {
+    "Benchmark":"BREEAM Estimate (80% TM46)",
+    "Type":"Long term residential",
+    "FEE":336,
+    "Elec":"52",
+    "Fuel_Price":"",
+    "DHW%":"0.1",
+    "Loc_Uplift":"TRUE"
+  },
+  {
+    "Benchmark":"Domestic",
+    "Type":"Code 5-Mid Terrace/Apartment",
+    "FEE":39,
+    "Elec":"SAP2012",
+    "Fuel_Price":"",
+    "DHW%":"SAP2012",
+    "Loc_Uplift":"FALSE"
+  },
+  {
+    "Benchmark":"Domestic",
+    "Type":"Code 5-Semi/detached",
+    "FEE":46,
+    "Elec":"SAP2012",
+    "Fuel_Price":"",
+    "DHW%":"SAP2012",
+    "Loc_Uplift":"FALSE"
+  },
+  {
+    "Benchmark":"Domestic",
+    "Type":"PassivHaus",
+    "FEE":10,
+    "Elec":"SAP2012",
+    "Fuel_Price":"",
+    "DHW%":"SAP2012",
+    "Loc_Uplift":"FALSE"
+  },
+  {
+    "Benchmark":"Domestic",
+    "Type":"Pt L- Mid Terrance/Apartment",
+    "FEE":43,
+    "Elec":"SAP2012",
+    "Fuel_Price":"",
+    "DHW%":"SAP2012",
+    "Loc_Uplift":"FALSE"
+  },
+  {
+    "Benchmark":"Domestic",
+    "Type":"Pt L-Semi/Detached",
+    "FEE":52,
+    "Elec":"SAP2012",
+    "Fuel_Price":"",
+    "DHW%":"SAP2012",
+    "Loc_Uplift":"FALSE"
+  },
+  {
+    "Benchmark":"CIBSE TM46",
+    "Type":"Swimming Pool Centre",
+    "FEE":1130,
+    "Elec":"245",
+    "Fuel_Price":"",
+    "DHW%":"0.2",
+    "Loc_Uplift":"TRUE"
+  },
+  {
+    "Benchmark":"CIBSE TM46",
+    "Type":"Dry Sports",
+    "FEE":330,
+    "Elec":"95",
+    "Fuel_Price":"",
+    "DHW%":"0.1",
+    "Loc_Uplift":"TRUE"
+  },
+  {
+    "Benchmark":"CIBSE TM46",
+    "Type":"General Retail",
+    "FEE":150,
+    "Elec":"165",
+    "Fuel_Price":"",
+    "DHW%":"0.1",
+    "Loc_Uplift":"TRUE"
+  },
+  {
+    "Benchmark":"CIBSE TM46",
+    "Type":"Large Food Store",
+    "FEE":105,
+    "Elec":"400",
+    "Fuel_Price":"",
+    "DHW%":"0.1",
+    "Loc_Uplift":"TRUE"
+  },
+  {
+    "Benchmark":"CIBSE TM46",
+    "Type":"School",
+    "FEE":150,
+    "Elec":"40",
+    "Fuel_Price":"",
+    "DHW%":"0.1",
+    "Loc_Uplift":"TRUE"
+  },
+  {
+    "Benchmark":"CIBSE TM46",
+    "Type":"General Office",
+    "FEE":120,
+    "Elec":"95",
+    "Fuel_Price":"",
+    "DHW%":"0.1",
+    "Loc_Uplift":"TRUE"
+  },
+  {
+    "Benchmark":"CIBSE TM46",
+    "Type":"Large non-food shop",
+    "FEE":170,
+    "Elec":"70",
+    "Fuel_Price":"",
+    "DHW%":"0.1",
+    "Loc_Uplift":"TRUE"
+  },
+  {
+    "Benchmark":"CIBSE TM46",
+    "Type":"Restaurant",
+    "FEE":370,
+    "Elec":"90",
+    "Fuel_Price":"",
+    "DHW%":"0.1",
+    "Loc_Uplift":"TRUE"
+  },
+  {
+    "Benchmark":"CIBSE TM46",
+    "Type":"Bar/pub",
+    "FEE":350,
+    "Elec":"130",
+    "Fuel_Price":"",
+    "DHW%":"0.1",
+    "Loc_Uplift":"TRUE"
+  },
+  {
+    "Benchmark":"CIBSE TM46",
+    "Type":"Hotel",
+    "FEE":330,
+    "Elec":"105",
+    "Fuel_Price":"",
+    "DHW%":"0.1",
+    "Loc_Uplift":"TRUE"
+  },
+  {
+    "Benchmark":"CIBSE TM46",
+    "Type":"Hospital",
+    "FEE":420,
+    "Elec":"90",
+    "Fuel_Price":"",
+    "DHW%":"0.1",
+    "Loc_Uplift":"TRUE"
+  },
+  {
+    "Benchmark":"CIBSE TM46",
+    "Type":"Long term residential",
+    "FEE":420,
+    "Elec":"65",
+    "Fuel_Price":"",
+    "DHW%":"0.1",
+    "Loc_Uplift":"TRUE"
+  },
+  {
+    "Benchmark":"CIBSE TM46",
+    "Type":"Laundry",
+    "FEE":100,
+    "Elec":"1",
+    "Fuel_Price":"",
+    "DHW%":"0.1",
+    "Loc_Uplift":"TRUE"
+  }
+]
