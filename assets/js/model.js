@@ -57,10 +57,10 @@ $(document).ajaxStop(function(){$("#loading").hide()});
 
 $(document).ready(function(){
 
-  // $('#data_input').DataTable( {
-    //     data: input,
-    //    columns: getColumns(input)
-    // } );
+//   $('#data_input').DataTable( {
+//         data: input,
+//        columns: getColumns(input)
+//     } );
 
 getInputData()
 
@@ -73,13 +73,19 @@ getInputData()
 
 
 
-// function showDataTable(){
-// 	  // $('#data_input').DataTable( {
-//     //     data: input,
-//     //    columns: getColumns(input)
-//     // } );
+function showDataTable(inp){
+    
+   var container = document.getElementById('data_input');
+var hot = new Handsontable(container,
+ {
+   data: inp
+  });
+	//   $('#data_input').DataTable( {
+    //     data: input,
+    //    columns: getColumns(input)
+    // } );
 
-// }
+}
 
 //---begin data functions ----
 //
@@ -95,6 +101,7 @@ var aprofile_data = fetchDATA("profile_data")
 
 $.when (aInput_data,aCluster_data).then(function(dInput,dCluster){
         input = dInput[0];
+        showDataTable(input)
         cluster_Data=dCluster[0];
         logStatus("getInputData End")
        //next step
