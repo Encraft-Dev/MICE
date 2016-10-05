@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+  	<div>
+	  <!-- Nav tabs -->
+	  <ul class="nav nav-tabs" role="tablist">
+	    <li role="presentation" class="active"><a href="#Architypes" aria-controls="Architypes" role="tab" data-toggle="tab">1.Archetypes</a></li>
+	    <li role="presentation"><a href="#Clusters" aria-controls="Cluster" role="tab" data-toggle="tab">2. Clusters</a></li>
+	    <li role="presentation" ><a href="#Buildings" aria-controls="Buildings" role="tab" data-toggle="tab">3.Buildings</a></li>
+	    
+	    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profiles</a></li>
+	    
+	  </ul>
+
+	  <!-- Tab panes -->
+	  <div class="tab-content">
+	    <div role="tabpanel" class="tab-pane active" id="Architypes">
+	    	<p>Enter your archetypes here.</p>
+	    	<hr/>
+	    		    		<table class="table">
+		    			<th>Name</th>
+		    			<th>New Build?</th>
+		    			<th>Benchmark Group</th>
+		    			<th>Profile</th>
+		    			<th>GIA (m<sup>2</sup>)</th>
+		    			<th>PV (kW)</th>
+		    			<th>Roof Pitch °</th>
+
+		    			<tr>
+		    				<td><input type="text"</input></td>
+		    				<td><input type="checkbox"></input></td>
+		    				<td><select>
+			    				<option>ERC-Domestic</option>
+			    				<option>Commercial industrial</option>
+			    			</select>
+			    			</td>
+			    		<td><select>
+			    				<option>High energy use</option>
+			    				<option>Low energy use</option>
+			    			</select></td>
+			    		<td><input type="text" maxlength="5" size="5" ></input></td>
+			    		<td><input type="text" maxlength="5" size="5"></input></td>
+			    		<td><input type="text" maxlength="2" size="2"></input></td>
+			    		</tr>
+			    		<tr>
+		    				<td><input type="text"</input></td>
+		    				<td><input type="checkbox"></input></td>
+		    				<td><select>
+			    				<option>ERC-Domestic</option>
+			    				<option>Commercial industrial</option>
+			    			</select>
+			    			</td>
+			    		<td><select>
+			    				<option>High energy use</option>
+			    				<option>Low energy use</option>
+			    			</select></td>
+			    			<td><input type="text" maxlength="5" size="5" ></input></td>
+			    		<td><input type="text" maxlength="5" size="5"></input></td>
+			    		<td><input type="text" maxlength="2" size="2"></input></td>
+			    		</tr>
+			    		<tr>
+		    				<td><input type="text"</input></td>
+		    				<td><input type="checkbox"></input></td>
+		    				<td><select>
+			    				<option>ERC-Domestic</option>
+			    				<option>Commercial industrial</option>
+			    			</select>
+			    			</td>
+			    		<td><select>
+			    				<option>High energy use</option>
+			    				<option>Low energy use</option>
+			    			</select></td>
+			    			<td><input type="text" maxlength="5" size="5" ></input></td>
+			    		<td><input type="text" maxlength="5" size="5"></input></td>
+			    		<td><input type="text" maxlength="2" size="2"></input></td>
+			    		</tr>
+		    		</table>
+	    </div>
+	    <div role="tabpanel" class="tab-pane" id="Clusters">
+	    	<p>List your clusters here</p>
+	    	<hr/>
+	    	<table id="table_clusters" class="table">
+	    		<th>Name</th>
+	    		<th>Active?</th>
+	    		<th>postcode</th>
+	    		<th>DH length</th>
+	    		<th>PV</th>
+	    		<th>EV</th>
+	    		<th>Battery</th>
+	    		<tr>
+	    			<td><input></input></td>
+	    			<td><input type="checkbox"></input></td>
+			    	<td><input></input></td>
+			    	<td><input></input></td>
+			    	<td><input type="checkbox"></input></td>
+			    	<td><input type="checkbox"></input></td>
+			    	<td><input type="checkbox"></input></td>
+	    		</tr>
+	    			<tr>
+	    			<td><input></input></td>
+	    			<td><input type="checkbox"></input></td>
+			    	<td><input></input></td>
+			    	<td><input></input></td>
+			    	<td><input type="checkbox"></input></td>
+			    	<td><input type="checkbox"></input></td>
+			    	<td><input type="checkbox"></input></td>
+	    		</tr>
+	    			<tr>
+	    			<td><input></input></td>
+	    			<td><input type="checkbox"></input></td>
+			    	<td><input></input></td>
+			    	<td><input></input></td>
+			    	<td><input type="checkbox"></input></td>
+			    	<td><input type="checkbox"></input></td>
+			    	<td><input type="checkbox"></input></td>
+	    		</tr>	    	
+	    	</table>
+	    
+
+	    </div>
+	    <div role="tabpanel" class="tab-pane" id="Buildings">
+	    	<p>Enter your buildings here.</p>
+	    	<hr/>
+	    	<table class="table">
+	    		<th>Cluster</th>
+	    		<th>Architype</th>
+	    		<th>#</th>
+	    		<th>Benchmark</th>
+	    		<th>Fuel</th>
+	    		<th>Generation</th>
+
+	    		<tr>
+	    			<td><select>
+			    		<option>Cluster 1</option>
+			    		<option>Cluster 2</option>
+			    	</select></td>
+			    	<td><select>
+			    		<option>Arch 1</option>
+			    		<option>Arch 2</option>
+			    	</select></td>
+			    	<td><input type="number" style="width:50px"></input></td>
+			    	<td><select>
+			    		<option>B1</option>
+			    		<option>B2</option>
+			    		</select></td>
+	    			<td>
+	    				<input size="3"> Gas </input><br />
+	    				<input size="3"> Elec </input><br />
+	    				 <input size="3"> DH1 </input><br />
+	    				<input size="3"> DH2 </input></td>
+	    			<td><input size="3"> W/E </input><br />
+	    				 <input size="3"> SW/SE </input><br />
+	    				<input size="3"> S </input></td>
+	    		</tr>
+	    			<tr>
+	    			<td><select>
+			    		<option>Cluster 1</option>
+			    		<option>Cluster 2</option>
+			    	</select></td>
+			    	<td><select>
+			    		<option>Arch 1</option>
+			    		<option>Arch 2</option>
+			    	</select></td>
+			    	<td><input type="number" style="width:50px"></input></td>
+			    	<td><select>
+			    		<option>B1</option>
+			    		<option>B2</option>
+			    		</select></td>
+	    			<td>
+	    				<input size="3"> Gas </input><br />
+	    				<input size="3"> Elec </input><br />
+	    				 <input size="3"> DH1 </input><br />
+	    				<input size="3"> DH2 </input></td>
+	    			<td><input size="3"> W/E </input><br />
+	    				 <input size="3"> SW/SE </input><br />
+	    				<input size="3"> S </input></td>
+	    		</tr>
+	    	</table>
+	    	
+	    	
+	    </div>
+	    <div role="tabpanel" class="tab-pane" id="profile">
+	    	<p> sdsdPhasellus malesuada ante odio, tristique sollicitudin mauris fringilla non. Aenean nec nisi sit amet mauris dapibus congue. Maecenas congue euismod dui. Sed id laoreet velit. Phasellus sed velit orci. Vestibulum aliquam massa mi, vel porttitor nibh porta quis. Nunc at quam accumsan tellus tempus vulputate. Aliquam condimentum nunc odio, eu imperdiet felis pretium at.</p>
+	    </div>
+	  </div>
+
+	</div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
