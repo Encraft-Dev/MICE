@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Count numbers: <output id="result"></output></p>
+<button onclick="startWorker('result')">Start Worker</button> 
+<button onclick="stopWorker('result')">Stop Worker</button>
+<p>Count numbers: <output id="result2"></output></p>
+<button onclick="startWorker('result2')">Start Worker2</button> 
+<button onclick="stopWorker('result2')">Stop Worker2</button>
+<br><br>
+<button onclick="stuff">change something</button> 
+
+
+<script>
+var w =[];
+
+function startWorker(div) {
+    if(typeof(Worker) !== "undefined") {
+        if(typeof(w[div]) == "undefined") {
+            w[div] = new Worker("demo_workers.js","*");
+        }
+        w[div].postMessage("hello")
+        w[div].onmessage = function(event) {
+            document.getElementById(div).innerHTML = event.data;
+        };
+    } else {
+        document.getElementById("result").innerHTML = "Sorry! No Web Worker support.";
+    }
+}
+
+function stopWorker(div) { 
+    w[div].terminate();
+    w[div] = undefined;
+}
+
+
+
+
+
+</script>
+
+</body>
+</html>
