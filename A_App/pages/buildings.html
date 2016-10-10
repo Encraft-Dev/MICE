@@ -1,0 +1,37 @@
+<!-- home.html -->
+    <div class="jumbotron text-center">
+        <h1>Buildings</h1>
+        	<table class="table" ng-controller="buildingController as controller">
+		    			<th>Name</th>
+		    			<th>New Build?</th>
+		    			<th>Benchmark Group</th>
+		    			<th>Profile</th>
+		    			<th>GIA (m<sup>2</sup>)</th>
+		    			<th>PV (kW)</th>
+		    			<th>Roof Pitch °</th>
+
+		    			<tr ng-repeat='data in $scope.input' >
+
+		    				<td><input type="text" value='{{data.ID}}'></input></td>
+		    				<td><input type="checkbox"></input></td>
+		    				<td><select>
+			    				<option>ERC-Domestic</option>
+			    				<option>Commercial industrial</option>
+			    			</select>
+			    			</td>
+			    		<td><select>
+			    				<option>High energy use</option>
+			    				<option>Low energy use</option>
+			    			</select></td>
+			    		<td><input type="text" maxlength="5" size="5" ></input></td>
+			    		<td><input type="text" maxlength="5" size="5"></input></td>
+			    		<td><input type="text" maxlength="2" size="2"></input></td>
+			    		</tr>
+			    		
+		    		</table>
+
+        <p>{{ input }}</p>
+
+
+
+    </div>
