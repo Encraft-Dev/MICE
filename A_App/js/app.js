@@ -1,5 +1,5 @@
 // create the module and name it scotchApp
-    var MICEapp = angular.module('MICEapp', ['ngRoute']);
+    var MICEapp = angular.module('MICEapp', ['ngRoute','angular.filter']);
 //config services
 //
 		MICEapp.factory("project",function(){
@@ -67,15 +67,42 @@
 	   
     });
 
-      MICEapp.controller('buildingController', function($scope, $http, project) {
+      MICEapp.controller('buildingController', function($scope, $http, project,dataService) {
       	 // create a message to display in our view
 	    $scope.message = 'building list';
+	   
 	    $scope.project=project;
+	    $scope.benchmarks=[];
+	    $scope.profiles=[];
+	    $scope.b ='sde';
+
+	    dataService.getBenchmarks().then(
+	    	function(d){$scope.benchmarks=d});
+
+	    dataService.getProfiles().then(
+	    	function(d){$scope.profiles=d});
+	    
+	   
+	    
+
+
+	    // bench.getBenchmarks= function(){
+	    // 	benchmarksService.getBenchmarks()
+	    // 	.success (function(benchmarks){
+	    // 		 $scope.benchmarks = benchmarks
+	    // 	})
+	    // }
+
+	    // bench.getBenchmarks()
+	    
+	    
+	    //console.log($scope.project);
+	    
 	    $scope.project.buildings=[];
-	     $http.get("../data/input_data.json")
+	    $http.get("../data/input_data.json")
 	    .success(function(response) {
 	        $scope.project.buildings = response;
-			console.log( $scope.project.buildings);
+			//console.log( $scope.project.buildings);
 	    });
 	   
 
