@@ -10,7 +10,8 @@
       <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-filter/0.5.11/angular-filter.js"></script>
-  
+    <script src="vendor/angular-file-saver.bundle.min.js"></script>
+     <script src="vendor/blob.js"></script>
 
       <script src="js/app.js"></script>
         <script src="js/controllers.js"></script>
@@ -24,13 +25,16 @@
                 <div class="navbar-header">
                     <a class="navbar-brand" href="/">MICE</a>
                 </div>
-
+                <div>{{globalmesssage}}</div>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
+
                     <li><a href="#archetypes"><i class="fa fa-university"></i> Archetypes</a></li>
                     <li><a href="#clusters"><i class="fa fa-tasks"></i> Clusters</a></li>
                     <li><a href="#buildings"><i class="fa fa-building-o"></i> Buildings</a></li>
                     <li><a href="#profiles"><i class="fa fa-bar-chart"></i> Profiles</a></li>
+                     <li><a href="#log"><i class="fa fa-ambulance"></i> Log</a></li>
+                      <li><a href="#file"><i class="fa fa-save"></i> Save/Load Project</a></li>
                 </ul>
             </div>
             </nav>

@@ -1,35 +1,35 @@
 <!-- home.html -->
-    <div class="jumbotron text-center" ng-controller="buildingController as controller">
+    <div class=" text-center" ng-controller="buildingController as controller">
         <h1>Buildings</h1>
         	
         	<table class="table" >
 		    			<th>Name</th>
-		    			<th>New Build?</th>
-		    			<th>Benchmark Group</th>
-		    			<th>Profile</th>
-		    			<th>GIA (m<sup>2</sup>)</th>
-		    			<th>PV (kW)</th>
-		    			<th>Roof Pitch °</th>
+		    			<th>Cluster</th>
+		    			<th>Archetype</th>
+		    			<th>#</th>
+		    			<th>Benchmark</th>
+		    			<th>Fuel</th>
+		    			<th>Generation</th>
 
-		    			<tr ng-repeat='data in project.buildings' >
-		    				<td><input type="text" value='{{data.ID}}'></input></td>
-		    				<td><input type="checkbox"></input></td>
-		    				<td>
-		    				<select	ng-options="bench.Benchmark for bench in benchmarks | unique:'Benchmark'" ng-model="b"></select>
-			    			</td>
-			    		<td><select ng-options="profile.name for profile in profiles | unique:'name'" ng-model="c"></select></td>
-			    		<td><input type="text" maxlength="5" size="5" ></input></td>
-			    		<td><input type="text" maxlength="5" size="5"></input></td>
-			    		<td><input type="text" maxlength="2" size="2"></input></td>
+		    			<tr ng-repeat='data in buildings' >
+		    				<td><input type="text" value='{{data.id}}'></input></td>
+			    			<td><select	ng-options="cluster.name for cluster in clusters" ng-model="data.cluster"></select></td>
+				    		<td><select ng-options="archetype.name for archetype in archetypes" ng-model="data.archetype"></select>
+
+				    		</td>
+
+				    		<td><input type="text" maxlength="5" size="5" ></input></td>
+				    		<td>{{data.archetype.benchmark_group.Benchmark}}
+				    		<select ng-options="bench.Type for bench in benchmarks | filter:{Benchmark:data.archetype.benchmark_group.Benchmark}" ng-model="data.benchmark"></select></td>
+				    		<td><input type="text" maxlength="5" size="5"></input></td>
+				    		<td><input type="text" maxlength="2" size="2"></input></td>
+				    		<td><button ng-click="removeBuilding($index)">X</button></td>
 			    		</tr>
 			    		
 		    		</table>
         	
+       <button id="add_buildings"  ng-click="addBuilding()">Add</button> 
+
        
-
-       <div> <pre>{{ input }}</pre></div>
-
-<div><pre>{{benchmarks}}</pre></div>
-
 
     </div>

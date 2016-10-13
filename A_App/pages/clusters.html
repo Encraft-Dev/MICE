@@ -1,6 +1,36 @@
-<!-- home.html -->
-    <div class="jumbotron text-center">
+   <div class="text-center" ng-controller="clusterController as controller">
         <h1>Clusters</h1>
+       
+        	<table class="table" >
+		    			<th>Name</th>
+		    			<th>Active?</th>
+		    			<th>Postcode</th>
+		    			<th>DH Length</th>
+		    			<th>PV</th>
+		    			<th>EV</th>
+		    			<th>Battery Storage</th>
 
-        <p>{{ message }}</p>
+		    			<tr ng-repeat='data in clusters track by data.id'>
+		    				<td><input type="text" ng-model="data.name" ></input></td>
+		    				<td><input type="checkbox" ng-model="data.active"></input></td>
+		    				<td><input type="text" ng-model="data.postcode" ></input></td>
+		    				<td><input type="text" ng-model="data.dh_length" ></input></td>
+		    				<td><input type="checkbox" ng-model="data.PV"></input></td>
+		    				<td><input type="checkbox" ng-model="data.EV"></input></td>
+		    				<td><input type="checkbox" ng-model="data.Battery"></input></td>
+
+
+
+		    				
+				    		<td><button ng-click="removeCluster($index)">X</button></td>
+			    		</tr>
+			    		<tr> 	</tr>
+		    		</table>
+        	
+       
+<button id="add_cluster"  ng-click="addCluster()">Add</button>
+     
+
+
+
     </div>
