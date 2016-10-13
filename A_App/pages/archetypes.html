@@ -1,6 +1,31 @@
-<!-- home.html -->
-    <div class="jumbotron text-center">
+    <div class="jumbotron text-center" ng-controller="archetypeController as controller">
         <h1>Archetypes</h1>
+        	<button id="add_archetype"  ng-click="addArchetype()">Add</button>
+        	<table class="table" >
+		    			<th>Name</th>
+		    			<th>New Build?</th>
+		    			<th>Benchmark Group</th>
+		    			<th>Profile</th>
+		    			<th>GIA (m<sup>2</sup>)</th>
+		    			<th>PV (kW)</th>
+		    			<th>Roof Pitch °</th>
 
-        <p>{{ message }}</p>
+		    			<tr ng-repeat='data in project.archetypes track by data.id'>
+		    				<td><input type="text" ng-model="data.name" ></input></td>
+		    				<td><input type="checkbox" ng-model="data.new"></input></td>
+		    				<td><select	ng-options="bench.Benchmark for bench in benchmarks | unique:'Benchmark'" ng-model="data.benchmark_group"></select></td>
+				    		<td><select ng-options="profile.name for profile in profiles | unique:'name'" ng-model="data.occ_profile"></select></td>
+				    		<td><input type="text" maxlength="5" size="5" ng-model="data.GIA"></input></td>
+				    		<td><input type="text" maxlength="5" size="5" ng-model="data.PV"></input></td>
+				    		<td><input type="text" maxlength="2" size="2" ng-model="data.pitch"></input></td>
+				    		<td><button ng-click="removeArchetype($index)">X</button></td>
+			    		</tr>
+		    		</table>
+        	
+       
+
+     
+
+
+
     </div>
