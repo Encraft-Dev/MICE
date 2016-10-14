@@ -11,14 +11,15 @@
 	        $routeProvider
 
 	            // route for the home page
-	            .when('/', {
-	                templateUrl : 'pages/home.html',
-	                controller  : 'mainController'
-	            })
+	            // .when('/', {
+	            //     templateUrl : 'pages/home.html',
+	            //     controller  : 'mainController'
+	            // })
 
 	            .when('/buildings', {
 	                templateUrl : 'pages/buildings.html',
-	                controller  : 'buildingController'
+	                controller  : 'buildingController',
+	                resolve: {projectService:projectService}
 	            })
 
 	       
@@ -29,7 +30,8 @@
 	            
 	            .when('/archetypes', {
 	                templateUrl : 'pages/archetypes.html',
-	                controller  : 'archetypeController'
+	                controller  : 'archetypeController',
+	                resolve: {projectService:projectService}
 	            })
 
 	            .when('/profiles', {
@@ -45,7 +47,11 @@
 	                templateUrl : 'pages/file.html',
 	                controller  : 'logController'
 	            });
+
+	             //provide promise to ensure background data is loaded before showing entry pages
+	            function projectService(myProject){return myProject.promise();}
 	    });
+
 
 
 

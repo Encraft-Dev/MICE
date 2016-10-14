@@ -13,7 +13,7 @@
 		    			<tr ng-repeat='data in archetypes track by data.id'>
 		    				<td><input type="text" ng-model="data.name" ></input></td>
 		    				<td><input type="checkbox" ng-model="data.new"></input></td>
-		    				<td><select	ng-options="bench.Benchmark for bench in benchmarks | unique:'Benchmark'" ng-model="data.benchmark_group"></select></td>
+		    				<td><select	ng-options="bench for bench in benchmark_grouplist" ng-model="data.benchmark_group"></select></td>
 				    		<td><select ng-options="profile.name for profile in profiles | unique:'name'" ng-model="data.occ_profile"></select></td>
 				    		<td><input type="text" maxlength="5" size="5" ng-model="data.GIA"></input></td>
 				    		<td><input type="text" maxlength="5" size="5" ng-model="data.PV"></input></td>

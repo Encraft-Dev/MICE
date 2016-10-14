@@ -1,21 +1,47 @@
 <!DOCTYPE html>
-<html ng-app="MICEapp">
+<html ng-app="MICEapp"  ng-controller="rootController as controller">
 <head>
   <title>MICE</title>
    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+   <style>
+    .thumb {
+    width: 24px;
+    height: 24px;
+    float: none;
+    position: relative;
+    top: 7px;
+}
 
+form .progress {
+    line-height: 15px;
+}
+
+.progress {
+    display: inline-block;
+    width: 100px;
+    border: 3px groove #CCC;
+}
+
+.progress div {
+    font-size: smaller;
+    background: orange;
+    width: 0;
+}
+   </style>
       <!-- SPELLS -->
       <!-- load angular and angular route via CDN -->
       <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-filter/0.5.11/angular-filter.js"></script>
-    <script src="vendor/angular-file-saver.bundle.min.js"></script>
-     <script src="vendor/blob.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-filter/0.5.11/angular-filter.js"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+      <script src="vendor/angular-file-saver.bundle.min.js"></script>
+      <script src="vendor/blob.js"></script>
+   
 
       <script src="js/app.js"></script>
-        <script src="js/controllers.js"></script>
-       <script src="js/services.js"></script>
+      <script src="js/controllers.js"></script>
+      <script src="js/services.js"></script>
 </head>
 
 <body>
@@ -23,9 +49,9 @@
             <nav class="navbar navbar-default">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="/">MICE</a>
+                    <a class="navbar-brand" href="/">MICE{{globalmesssage}}</a>
                 </div>
-                <div>{{globalmesssage}}</div>
+             
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
 
