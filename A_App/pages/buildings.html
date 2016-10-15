@@ -14,25 +14,18 @@
 
 		    			<tr ng-repeat='data in buildings' >
 		    				<td><input type="text" value='{{data.id}}'></input></td>
-			    			<td><select	ng-options="name for name in clusterslist " ng-model="data.cluster"></select></td>
-				    		<td><select ng-options="arch.name for arch in archetypes" ng-model="data.archetype"></select></td>
+			    			<td><select	ng-options="name for name in clusterslist " ng-model="data.cluster"> <option value="">-- Select Cluster --</option></select></td>
+				    		<td><select ng-options="arch.name for arch in archetypes" ng-model="data.archetype"> <option value="">-- Select Archetype --</option></select></td>
 				    		<td><input type="text" maxlength="4" size="4" ></input></td>
 				    		<td>  		
-				    		{{data.archetype.benchmark_group}}
-				    			<select ng-options="bench for bench in benchmark_grouplist" ng-model="data.benchmark_group"></select>
-				    			
-				    			<!-- <select ng-change="DropDownChanged($index)">
-				    				<option ng-repeat='bmg in benchmark_grouplist' ng-selected='bmg===data.archetype.benchmark_group'>{{bmg}}</option>
-				    			</select> -->
-				    			
+				    		{{data.archetype.benchmark_group}}	
 				    		</td>
 				    		<td>
-				    		<select ng-options="bench.Type for bench in benchmarks | filter:{Benchmark:data.archetype.benchmark_group.Benchmark}" ng-model="data.benchmark"></select></td>
+				    		<select ng-show='data.archetype.benchmark_group' ng-options="bench.Type for bench in benchmarks | filter:{Benchmark:data.archetype.benchmark_group}" ng-model="data.benchmark"></select></td>
 				    		<td><input type="text" maxlength="5" size="5"></input></td>
 				    		<td><input type="text" maxlength="2" size="2"></input></td>
 				    		<td><button ng-click="removeBuilding($index)">X</button></td>
-				    		<td>{{data}}
-			    		</tr>
+				    	</tr>
 			    		
 		    		</table>
         	

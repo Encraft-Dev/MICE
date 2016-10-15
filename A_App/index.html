@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="MICEapp"  ng-controller="rootController as controller">
+<html ng-app="MICEapp"  >
 <head>
   <title>MICE</title>
    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
@@ -28,8 +28,10 @@ form .progress {
     background: orange;
     width: 0;
 }
+#project_name {font-size: large}
+}
    </style>
-      <!-- SPELLS -->
+      
       <!-- load angular and angular route via CDN -->
       <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.js"></script>
@@ -44,12 +46,19 @@ form .progress {
       <script src="js/services.js"></script>
 </head>
 
-<body>
+<body ng-controller="rootController as controller">
    <header>
             <nav class="navbar navbar-default">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="/">MICE{{globalmesssage}}</a>
+                  <div ng-hide="rootproject.edit">
+                     <strong  id="project_name">{{ rootproject.message }}</strong>
+                     <a ng-click='editProjectName()'><i class="fa fa-edit"></i> </a>
+                  </div>
+                  <div ng-show="rootproject.edit">
+                   <input ng-model="rootproject.message"></input>
+                    <a ng-click='saveProjectName()' ><i class="fa fa-save"></i> </a>
+                  </div>
                 </div>
              
                 <ul class="nav navbar-nav navbar-right">
@@ -65,31 +74,8 @@ form .progress {
             </div>
             </nav>
         </header>
-
-
-
-
-
-        <!-- MAIN CONTENT AND INJECTED VIEWS -->
     
 
       <div ng-view></div>
-
-
-
-
-
-
-  <!-- <ng-view></ng-view> -->
-
-   <!-- HEADER AND NAVBAR -->
-      
-
-
-
-
- <!--  <script src="js/app.js"></script>
-  <script src="js/services.js"></script>
-  <script src="js/controllers.js"></script> -->
 </body>
 </html>

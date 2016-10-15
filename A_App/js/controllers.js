@@ -1,6 +1,17 @@
-  MICEapp.controller('rootController', function($scope) {
+  MICEapp.controller('rootController', function($scope,myProject) {
       	 // create a message to display in our view
-	    $scope.globalmessage = 'my controller';
+	    $scope.rootproject = {};
+	    $scope.rootproject.message='MICE';
+	    $scope.rootproject.edit=false;
+	    myProject.put('ProjectName',$scope.rootproject.message)
+	     // set defualt project title
+	    $scope.editProjectName = function(){
+		    $scope.rootproject.edit =true;
+			};
+        $scope.saveProjectName = function(){
+		    $scope.rootproject.edit =false
+		 	myProject.put('ProjectName',$scope.rootproject.message)
+			};
       });
 
 
@@ -9,7 +20,7 @@
 
     // create the controller and inject Angular's $scope
     MICEapp.controller('mainController', ["$rootScope","$scope","myProject", function($rootScope,$scope,myProject) {
-
+    	$scope.rootproject.message="updated";
         // create a message to display in our view
 	    $scope.message = 'Everyone come and see how good I look!';
 	  
@@ -45,14 +56,7 @@
 		   $scope.clusterslist = _.pluck($scope.clusters,'name');
 		   $scope.benchmark_grouplist = _.uniq(_.pluck($scope.benchmarks,'Benchmark'));
 			
-			//$scope.benchmark_group = $scope.archetype.benchmark_group
-			//console.log($scope.archetype.benchmark_group)
-		// function refresh (){
-		//    $scope.archetypeslist = _.pluck($scope.archetypes,'name');
-		//    $scope.clusterslist = _.pluck($scope.clusters,'name');
-		//    $scope.benchmark_grouplist = _.pluck($scope.benchmarks,'name');
-	 //    }
-
+		
 		$scope.addBuilding = function(){
 			template_building.id=Date.now();
 			$scope.buildings.push(angular.copy(template_building));
@@ -65,27 +69,7 @@
         	myProject.put("Buildings",$scope.buildings) //console.log("location changing to:" + next); 
         	//myProject.put("Benchmarks",$scope.benchmarks)
         });
-
 		
-		//$scope.$on('myProject.data.loaded',refresh())
-
-		// $scope.$on('myProject.data.loaded', function(event, args) {
-		// 	myProject.log('Benchmarks loaded');
-		// 	$scope.benchmarks=myProject.get("Benchmarks")//[];	
-		// 	myProject.log('Profiles loaded');
-		// 	$scope.profiles=myProject.get("Profiles")//[];;
-		// });
-		// $rootScope.$on('myProject.benchmarks.updated', function(event, args) {
-		// 	myProject.log('b:Benchmarks loaded');
-		// 	$scope.benchmarks=myProject.get("Benchmarks")//[];
-		// });
-
-  //   	$rootScope.$on('myProject.profiles.updated', function(event, args) {
-		// 	myProject.log('b:Profiles loaded');
-		// 	$scope.profiles=myProject.get("Profiles")//[];;
-		// });
-        
-	  
       }]);
 
 
@@ -108,29 +92,9 @@
 		
          (!myProject.get("Benchmarks") ? $scope.benchmarks=[]  : $scope.benchmarks=myProject.get("Benchmarks")); 
 		 (!myProject.get("Archetypes") ? $scope.archetypes=[]  : $scope.archetypes=myProject.get("Archetypes"));
+		 (!myProject.get("Profiles") ? $scope.profiles=[]  : $scope.profiles=myProject.get("Profiles"));
 
 		  $scope.benchmark_grouplist = _.uniq(_.pluck($scope.benchmarks,'Benchmark'));
-
-	
-		
-		// function refresh (){
-			
-		// 		 // $scope.benchmarks=myProject.get("Benchmarks");
-		// 		 // $scope.profiles=myProject.get("Profiles");
-					
-		// }
-		// $scope.$on('myProject.data.loaded',refresh())
-		//$scope.benchmarks = myProject.get("Benchmarks")
-       // (!myProject.get("Benchmarks") ? $scope.benchmarks=[]  : $scope.benchmarks=myProject.get("Benchmarks")); 
-       	//add project wide data.. once it is loaded..
-       	
-  //      	$scope.$on('myProject.data.loaded', function(event, args) {
-		// 	myProject.log('Benchmarks loaded');
-		// 	$scope.benchmarks=myProject.get("Benchmarks")//[];	
-		// 	myProject.log('Profiles loaded');
-		// 	$scope.profiles=myProject.get("Profiles")//[];;
-		// });
-     
 
     	$scope.addArchetype = function(){
     		template_archetype.id=Date.now();
@@ -144,7 +108,6 @@
         	myProject.put("Archetypes",$scope.archetypes) //console.log("location changing to:" + next); 
       		});
     }]);
-
 
   MICEapp.controller('clusterController', ["$scope","myProject",function($scope, myProject) {
       	var template_cluster =
@@ -206,11 +169,13 @@
        MICEapp.controller('fileController', ['$scope','FileSaver','Blob','myProject', function($scope,FileSaver,Blob,myProject) {
       	 // create a message to display in our view
 	    $scope.message = 'file operations list';
-	    $scope.data = myProject.all();
-	    console.log($scope.data)
+	    
 	    $scope.saveProject = function (){
+	    	myProject.log('Project saved')
+	    	$scope.data = myProject.all();
+	    	var savename = prompt("Save file name", "output");
            var data = new Blob([angular.toJson($scope.data)], { type: 'text/plain;charset=utf-8' });
-            FileSaver.saveAs(data, 'output.json');
+            FileSaver.saveAs(data, savename+'.json');
 	    };
 
 	    $scope.uploadFile = function(x){
@@ -224,10 +189,12 @@
 		         var reader = new FileReader();
 		         reader.onload = function(e) {
 		            // handle onload
-		            console.log(reader);
-		            scope.$apply(function(){})
-		            $scope.thisProject = myProject.file(JSON.parse(reader.result));
-		            console.log(scope.thisProject);
+		         
+		            $scope.$apply(function(){
+		            	 $scope.thisProject = myProject.file(JSON.parse(reader.result));
+		            	 $scope.rootproject.message=thisProject.projectName
+		            })
+		           
 		         };
 		         reader.readAsText(photofile);
 		     });
